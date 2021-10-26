@@ -1,5 +1,6 @@
 import { formatError } from './utils.js'
 import {} from '../node_modules/howler/dist/howler.js';
+import soundScr from '../sounds.mp3';
 
 const timerForm = document.getElementById('timer');
 const timerText = document.getElementById('timer__text');
@@ -8,7 +9,7 @@ const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
 let timer;
 var sound = new Howl({
-    src: ['../sounds.mp3'],
+    src: [soundScr],
     html5: true
 });
 

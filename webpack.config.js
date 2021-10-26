@@ -20,7 +20,10 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.(png|jpe?g|gif|mp3)$/i,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
             },
             {
                 test: /\.css$/,
