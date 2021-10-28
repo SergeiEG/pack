@@ -1,38 +1,30 @@
 {
-    "name": "pack",
+    "name": "project",
     "version": "1.0.0",
     "description": "",
-    "main": "./scr/main.js",
-    "dependencies": {
-        "howler": "^2.2.3",
-        "luxon": "^2.0.2",
-        "webpack-bundle-analyzer": "^4.5.0"
-    },
-    "devDependencies": {
-        "css-loader": "^6.4.0",
-        "file-loader": "^6.2.0",
-        "html-webpack-plugin": "^5.5.0",
-        "mini-css-extract-plugin": "^2.4.3",
-        "style-loader": "^3.3.1",
-        "webpack": "^5.59.1",
-        "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^4.3.1"
-    },
+    "main": "scr/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "npx webpack --mode=development",
         "build": "npx webpack --mode=production",
-        "serve": "npx webpack serve --mode=development"
+        "serve": "webpack-dev-server --mode development --hot --live-reload --open"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SergeiEG/pack.git"
-    },
+    "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/SergeiEG/pack/issues"
-    },
-    "homepage": "https://github.com/SergeiEG/pack#readme",
-    "keywords": []
+    "devDependencies": {
+        "css-loader": "^6.5.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.5.0",
+        "img-optimize-loader": "^1.0.7",
+        "mini-css-extract-plugin": "^2.4.3",
+        "sass": "^1.43.4",
+        "sass-loader": "^12.2.0",
+        "scss": "^0.2.4",
+        "scss-loader": "0.0.1",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.60.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.3.1"
+    }
 }

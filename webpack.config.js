@@ -4,12 +4,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
+    target: 'web',
     entry: {
-        main: path.resolve(__dirname, './scr/main.js'),
+        main: path.resolve(__dirname, './scr/index.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'main.[contenthash].js',
+    },
+    devServer: {
+        port: 8080,
+        hot: true,
     },
     plugins: [
         new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'index.html') }),
@@ -19,18 +24,23 @@ module.exports = {
     ],
     module: {
         rules: [{
-                test: /\.(png|jpe?g|gif|mp3)$/i,
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'img-optimize-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
+            },
+            {
+                test: /\.mp(3|4)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]'
                 }
             },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
         ]
-
     },
-
 }

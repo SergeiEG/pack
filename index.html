@@ -3,40 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datetime superapp</title>
-    <script src="scr/main.js" type="module"></script>
+    <title>Document</title>
+    <script src="scr/index.js" type="module"></script>
 </head>
 
 <body>
-    <button class="calc-btn" data-item="calc">Открыть калькулятор дат</button>
-    <button class="timer-btn" data-item="time">Открыть таймер</button>
-    <div class="block__calc close">
-        <form id="datecalc">
-            <h3>Калькулятор дат</h3>
-            <label>
-            <strong>Первая дата:</strong>
-            <input type="date" name="firstDate" />
-        </label>
-            <label>
-            <strong>Вторая дата:</strong>
-            <input type="date" name="secondDate" />
-        </label>
-            <button type="submit">Расчитать промежуток</button>
-            <p id="datecalc__result"></p>
-        </form>
-    </div>
-    <div class="block__timer close">
-        <form id="timer">
-            <h3>Таймер</h3>
-            <label>
-                <input type="text" name="time" id="time">
-                <button id="start">Старт</button>
-                <button id="stop">Стоп</button>
-                <div id="timer__text"></div>
-            </label>
-        </form>
-    </div>
+    <main>
+        <h1>Галерея</h1>
+        <div class="galery"></div>
+    </main>
+
 </body>
 
 </html>
